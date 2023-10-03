@@ -1,0 +1,26 @@
+{
+    "31337": {
+        "exchange": {
+            "address" : "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+        },
+        "OXO": {
+            "address" : "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+        },
+        "GBPc": {
+            "address" : "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+        },
+        "explorerURL" : "#"
+    },
+    "11155111" : {
+        "exchange": {
+            "address" : "0x7Bbd52d6fe0fC4Ad543c11bB4a8D71EdCFA6a35F"
+        },
+        "OXO": {
+            "address" : "0xF2A4B5d81904aD0B10CA437905a97FEd39ABd621"
+        },
+        "GBPc": {
+            "address" : "0x1be1a2C37f1EAEc2a4B642649CaC5b29eA590a5E"
+        },
+        "explorerURL" : "https://sepolia.etherscan.io/"
+    }
+}
