@@ -84,7 +84,7 @@ const Options = ({ network, setNetwork }) => {
             <div className="flex-between">
                 <div className="tabs">
                         <button onClick={(e) => changeTab(e, 'Sepolia')} className={network==='Sepolia' ? 'tab tab--active' : 'tab'}>Sepolia Testnet</button>
-                        <button disabled style={{color:"grey"}} onClick={(e) => changeTab(e, 'Mumbai')} className={network==='Mumbai' ? 'tab tab--active' : 'tab'}>Mumbai Testnet (coming soon)</button>
+                        <button disabled style={{color:"grey"}} onClick={(e) => changeTab(e, 'Mumbai')} className={network==='Mumbai' ? 'tab tab--active' : 'tab'}>Mumbai Testnet</button>
                         <button onClick={(e) => changeTab(e, 'Hardhat')} className={network==='Hardhat' ? 'tab tab--active' : 'tab'}>Hardhat (Github/Docker)</button>
                 </div>
             </div>

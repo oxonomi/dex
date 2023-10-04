@@ -35,7 +35,7 @@ const PriceChart = () => {
               </div>
             )}
           </div>
-          {chainId !== "31337" && <a href={`${config[chainId].explorerURL}/address/${config[chainId].exchange.address}`} target="_blank" rel="noopener noreferrer">
+          {chainId !== 31337 && <a href={`${config[chainId].explorerURL}/address/${config[chainId].exchange.address}`} target="_blank" rel="noopener noreferrer">
             <button className="button button--sm">Etherscan</button>
           </a>}
         </div>

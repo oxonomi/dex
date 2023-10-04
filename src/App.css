@@ -1,3 +1,7 @@
+/* This CSS has been hacked together because the layout and design has changed
+considerably through development. If I was to create a production version I'd rewrite most of this,
+especially the media queries.  */
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 :root {
@@ -53,6 +57,7 @@ h2 {
 p,
 small {
 	font-weight: 400;
+	word-wrap: break-word;
 }
 
 small {
@@ -406,6 +411,33 @@ input::placeholder {
 	}
   }
 
+  @media (max-width: 500px) {
+	.tab {
+		flex: 1 0 calc(30% - 0.40em); /* Make each tab take up 20% of the width, minus the padding */
+	}
+	.tab:nth-child(n+6) {
+		flex: 1 0 calc(30% - 0.40em); /* For the items 6 to 9, make them take up 25% of the width */
+	  }
+  }
+
+  @media (max-width: 390px) {
+	.tab {
+		flex: 1 0 calc(50% - 0.40em); /* Make each tab take up 20% of the width, minus the padding */
+	}
+	.tab:nth-child(n+6) {
+		flex: 1 0 calc(50% - 0.40em); /* For the items 6 to 9, make them take up 25% of the width */
+	  }
+  }
+
+  @media (max-width: 250px) {
+	.tab {
+		flex: 1 0 calc(60% - 0.40em); /* Make each tab take up 20% of the width, minus the padding */
+	}
+	.tab:nth-child(n+6) {
+		flex: 1 0 calc(60% - 0.40em); /* For the items 6 to 9, make them take up 25% of the width */
+	  }
+  }
+
 /* ------------------------------------------------------ */
 /* -- Table -- */
 
@@ -449,11 +481,14 @@ table td {
 	/* font-size: clamp(0.90rem, 2vw, 0.95rem); */
 	font-weight: 400;
 	text-align: right;
+	word-wrap: break-word;
 
 }
 
 /* ------------------------------------------------------ */
 /* -- Alert -- */
+
+
 
 .alert {
 	background: var(--clr-secondary);
@@ -552,20 +587,6 @@ table td {
 }
 
 
-
-@media screen and (min-width: 840px) {
-	.my__card {
-		width: 672px;
-	}
-}
-@media screen and (min-width: 1200px) {
-	.my__card {
-		width: 672px;
-	}
-}
-
-
-
 .inner-card {
 	padding-left: 2em;
 }
@@ -595,6 +616,7 @@ a:link, a:visited {
 	padding: 4px;
 	cursor: text;
 	margin-bottom: 1rem;
+	line-height: 30px;
 }
 
 li:not(:last-child) {
@@ -685,7 +707,104 @@ li:not(:last-child) {
 .flex-apart {
 	display: flex;
 	justify-content: space-between;
-	width: 200px;
+	width: 160px;
 }
 
 /* CSS file needs cleaning up*/
+
+
+@media screen and (max-width: 430px) {
+
+	ul {
+		padding-left: 1em;
+	}
+
+	li a {
+		overflow-wrap: break-word;
+	}
+
+	table th:first-child, td:first-child {
+		font-size: x-small;
+	}
+
+	.inner-card {
+		padding-left: 0.5em;
+	}
+
+	.alert {
+		width: 80%;
+		right: 10%;
+	}
+
+	.flex-apart {
+		width: 115px;
+	}
+
+	.exchange__transfers--balances {
+		width: 30%;
+	}
+
+}
+
+
+@media screen and (max-width: 650px) {
+
+	/* ul {
+		padding-left: 1em;
+	} */
+
+
+	.flex, .flex-between {
+		flex-wrap: wrap;
+	}
+
+	.my__header {
+		padding: 2% 0 2% 0;
+	}
+
+	.my__card {
+		width: 100%;
+		padding: 5%;
+	}
+
+	.exchange__chart, .exchange__orderbook, .exchange__trades, .exchange__transactions {
+		padding: 3%;
+		margin: 0;
+	}
+
+	.orderbook-flex-around{
+		min-width: auto;
+	}
+}
+
+@media screen and (min-width: 840px) {
+	.my__card {
+		width: 672px;
+	}
+	.code {
+		line-height: inherit;
+	}
+}
+@media screen and (min-width: 840px) {
+	.my__card {
+		width: 672px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.my__card {
+		width: 672px;
+	}
+}
+
+
+/* .my__card {
+	background: var(--clr-tertiary);
+
+	padding: 40px;
+	border-radius: 25px;
+	border: 1px solid var(--clr-accent-trans);
+	width: 83%;
+    margin: 0 auto 40px auto;
+	min-height: 400px;
+
+} */

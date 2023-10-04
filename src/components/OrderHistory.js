@@ -27,7 +27,7 @@ const OrderHistory = () => {
 
     return (
       <div>
-        <div className='order_history-flex'>
+        <div className='order_history-flex' style={{margin:"10px"}}>
             <div className='tabs'>
                 <button onClick={tabHandler} ref={orderBookRef} className='tab--small tab--active'>Order Book</button>
                 <button onClick={tabHandler} ref={historyRef} className='tab--small'>History</button>
