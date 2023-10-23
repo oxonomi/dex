@@ -1,6 +1,6 @@
 # dex
 
-https://oxo-dex.on.fleek.co/
+View the project live here: https://oxo-dex.on.fleek.co/
 
 This app is a decentralised cryptocurrency token exchange similar to UniSwap and PancakeSwap.
 It is a fully functional demo running on testnets, intended to showcase smart contract functionality. It is not a production version.
